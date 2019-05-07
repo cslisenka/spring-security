@@ -72,7 +72,6 @@ public class DemoSecurityWebApplication {
 //			return new InMemoryUserDetailsManager(user);
 //		}
 
-		// TODO why do we configure it instead of using user details service?
 		@Override
 		protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 			// TODO use apache DS server
@@ -102,10 +101,9 @@ public class DemoSecurityWebApplication {
 			http
 				.authorizeRequests()
 					.antMatchers("/service").permitAll()
+					.antMatchers("/actuator/*").hasRole("ADMIN")
 					.antMatchers("/admin/*").hasRole("ADMIN")
 					.anyRequest().authenticated() // Other requests
-				.and()
-					.formLogin().permitAll()
 				.and()
 					.httpBasic();
 

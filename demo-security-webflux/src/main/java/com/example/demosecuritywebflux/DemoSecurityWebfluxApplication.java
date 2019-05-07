@@ -66,12 +66,11 @@ public class DemoSecurityWebfluxApplication {
 		http
 			.authorizeExchange()
 				.pathMatchers("/service").permitAll()
+				.pathMatchers("/actuator/*").hasRole("ADMIN")
 				.pathMatchers("/admin/*").hasRole("ADMIN")
 				.anyExchange().authenticated()
 			.and()
-				.httpBasic()
-			.and()
-				.formLogin();
+				.httpBasic();
 		return http.build();
 	}
 }

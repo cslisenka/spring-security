@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo-security-web/demo-security-web.iml" filepath="$PROJECT_DIR$/demo-security-web/demo-security-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-security-webflux/demo-security-webflux.iml" filepath="$PROJECT_DIR$/demo-security-webflux/demo-security-webflux.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/spring-security-github.iml" filepath="$PROJECT_DIR$/.idea/spring-security-github.iml" />
+    </modules>
+  </component>
+</project>
